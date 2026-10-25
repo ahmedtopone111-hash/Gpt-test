@@ -1,0 +1,492 @@
+:root {
+  --background: #0b141c;
+  --panel: #122638;
+  --panel-light: #1a344b;
+  --border: #2c5876;
+  --text: #f4f8ff;
+  --muted: #aebdca;
+  --cyan: #12d9e8;
+  --purple: #a94cff;
+  --yellow: #ffc928;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top right, #172f50, var(--background) 45%);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+.container,
+.nav-inner {
+  width: min(92%, 1120px);
+  margin: auto;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: rgba(22, 55, 82, 0.95);
+  border-bottom: 1px solid var(--border);
+}
+
+.nav-inner {
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: 900;
+  color: white;
+  white-space: nowrap;
+}
+
+.logo span {
+  color: var(--purple);
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+
+.navbar-menu a {
+  color: var(--muted);
+  transition: 0.2s;
+}
+
+.navbar-menu a:hover,
+.navbar-menu a.active {
+  color: white;
+}
+
+.menu-button,
+.theme-button {
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-button {
+  display: none;
+  background: transparent;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.theme-button {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--yellow);
+}
+
+.hero {
+  min-height: 560px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+}
+
+.eyebrow {
+  color: var(--cyan);
+  font-size: 0.75rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1.05;
+}
+
+h1 span {
+  color: var(--purple);
+}
+
+.hero-text,
+.page-heading > p,
+.card-content p,
+.watch-details > p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.hero-text {
+  max-width: 480px;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.hero-art img {
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.main-button,
+.watch-link {
+  display: inline-block;
+  background: var(--cyan);
+  color: #05202a;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 13px 20px;
+}
+
+.section-block,
+.page-main {
+  padding: 45px 0 80px;
+}
+
+.section-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin-bottom: 22px;
+}
+
+.section-heading > a,
+.back-link {
+  color: var(--cyan);
+}
+
+.anime-grid,
+.episodes-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.anime-card,
+.episode-card,
+.small-episode {
+  display: block;
+  background: rgba(18, 38, 56, 0.88);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.25s;
+}
+
+.anime-card:hover,
+.episode-card:hover,
+.small-episode:hover {
+  transform: translateY(-4px);
+  border-color: var(--cyan);
+}
+
+.card-image-wrap,
+.episode-image-wrap {
+  position: relative;
+}
+
+.card-image-wrap img,
+.episode-image-wrap img {
+  width: 100%;
+  height: 210px;
+  display: block;
+  object-fit: cover;
+}
+
+.episode-count,
+.episode-number {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 6px 9px;
+  border-radius: 7px;
+  font-size: 0.8rem;
+}
+
+.card-content,
+.episode-info {
+  padding: 16px;
+}
+
+.card-content h2,
+.card-content h3,
+.episode-info h2 {
+  margin-bottom: 8px;
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+.card-link,
+.watch-link {
+  color: var(--cyan);
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.page-heading {
+  margin: 35px 0 28px;
+}
+
+.page-heading h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  margin-bottom: 12px;
+}
+
+.anime-heading {
+  margin-top: 20px;
+}
+
+.episode-info p {
+  color: var(--cyan);
+  font-size: 0.85rem;
+  margin-bottom: 5px;
+}
+
+.watch-link {
+  margin-top: 15px;
+  padding: 0;
+  background: transparent;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 15px;
+}
+
+.watch-layout {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 25px;
+  margin-top: 25px;
+}
+
+.video-box {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  background: #050a10;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.video-message {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 8px;
+  text-align: center;
+  color: var(--muted);
+  pointer-events: none;
+}
+
+.video-message span {
+  color: var(--cyan);
+  font-size: 2rem;
+}
+
+.watch-details {
+  padding: 22px 0;
+}
+
+.watch-details h1 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  margin-bottom: 12px;
+}
+
+.more-episodes {
+  background: rgba(18, 38, 56, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 18px;
+  height: fit-content;
+}
+
+.more-episodes h2 {
+  margin-bottom: 15px;
+}
+
+.small-episode {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  margin-top: 10px;
+}
+
+.small-episode img {
+  width: 70px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 7px;
+}
+
+.small-episode span {
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.small-episode b {
+  display: block;
+  color: white;
+  margin-top: 4px;
+}
+
+.empty-state {
+  min-height: 400px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 20px;
+}
+
+.contact-form {
+  max-width: 650px;
+  display: grid;
+  gap: 14px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 14px;
+  background: var(--panel);
+  color: var(--text);
+  font: inherit;
+}
+
+.contact-form textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.footer {
+  text-align: center;
+  color: var(--muted);
+  border-top: 1px solid var(--border);
+  padding: 22px;
+}
+
+body.light {
+  --background: #edf3f8;
+  --panel: #ffffff;
+  --text: #102333;
+  --muted: #526777;
+}
+
+body.light .navbar,
+body.light .anime-card,
+body.light .episode-card,
+body.light .more-episodes,
+body.light .small-episode {
+  background: #ffffff;
+}
+
+@media (max-width: 700px) {
+  .container,
+  .nav-inner {
+    width: min(92%, 430px);
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 4%;
+    right: 4%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px;
+    background: #163752;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu a {
+    display: block;
+    padding: 13px;
+  }
+
+  .menu-button {
+    display: block;
+    margin-left: auto;
+  }
+
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 45px;
+  }
+
+  .hero-art {
+    order: -1;
+  }
+
+  .hero-art img {
+    max-height: 280px;
+    object-fit: cover;
+  }
+
+  .section-block,
+  .page-main {
+    padding-top: 35px;
+  }
+
+  .section-heading {
+    align-items: start;
+    gap: 12px;
+  }
+
+  .anime-grid,
+  .episodes-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-image-wrap img,
+  .episode-image-wrap img {
+    height: 200px;
+  }
+
+  .watch-layout {
+    grid-template-columns: 1fr;
+  }
+}
